@@ -2,6 +2,9 @@
 
 # dependencies
 /node_modules
+./prisma/migrations
+./prisma/dev.db
+
 /.pnp
 .pnp.*
 .yarn/*
@@ -32,7 +35,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
-
+.db*
 # vercel
 .vercel
 
@@ -42,3 +45,5 @@ next-env.d.ts
 
 # clerk configuration (can include secrets)
 /.clerk/
+
+/generated/prisma
