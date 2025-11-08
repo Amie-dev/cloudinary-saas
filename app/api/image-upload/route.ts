@@ -1,3 +1,8 @@
+
+
+
+
+
 import { NextResponse, NextRequest } from "next/server";
 import { v2 as cloudinary } from "cloudinary";
 import { auth } from "@clerk/nextjs/server";
@@ -14,7 +19,7 @@ interface CloudinaryUploadResult {
 }
 
 export async function POST(request: NextRequest) {
-  const { userId } = auth();
+  const { userId } = await auth();
 
   if (!userId) {
     return NextResponse.json({ error: "Unauthorize" }, { status: 401 });
